@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "desconto-sustentavel",
+    "name": "Desconto Sustentável",
     "slug": "desconto-sustentavel",
     "scheme": "app",
     "version": "1.0.0",
@@ -8,30 +8,25 @@
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "backgroundColor": "#F54142",
     "splash": {
-      "image": "",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./assets/splash-icon.png",
+      "backgroundColor": "#F54142"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.matheuspedrosam.mktalimentosavencer"
+      "bundleIdentifier": "com.citec.descontosustentavel"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.png",
+        "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#F54142"
       },
       "permissions": [
-        "android.permission.RECORD_AUDIO",
-        "android.permission.ACCESS_COARSE_LOCATION",
-        "android.permission.ACCESS_FINE_LOCATION",
-        "android.permission.RECORD_AUDIO",
         "android.permission.ACCESS_COARSE_LOCATION",
         "android.permission.ACCESS_FINE_LOCATION"
       ],
-      "package": "com.matheuspedrosam.mktalimentosavencer",
-      "googleServicesFile": "./google-services.json"
+      "package": "com.citec.descontosustentavel"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -47,9 +42,7 @@
       ],
       [
         "expo-updates",
-        {
-          "username": "matheuspedrosam"
-        }
+        {}
       ]
     ],
     "extra": {
@@ -57,14 +50,12 @@
         "origin": false
       },
       "eas": {
-        "projectId": "d34575a2-b813-428e-be11-e992c24f4ab1"
+        "projectId": "30dfc7d9-fda5-4b82-8755-114b2dece766"
       }
     },
     "runtimeVersion": {
       "policy": "appVersion"
     },
-    "updates": {
-      "url": "https://u.expo.dev/d34575a2-b813-428e-be11-e992c24f4ab1"
-    }
+    "updates": {}
   }
 }

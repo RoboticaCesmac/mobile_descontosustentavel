@@ -12,7 +12,7 @@ import paginateArray from '../../../utils/paginateArray';
 import { Modalize } from 'react-native-modalize';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Slider } from 'react-native-awesome-slider';
-import { useSharedValue } from 'react-native-reanimated';
+// import { useSharedValue } from 'react-native-reanimated';
 import orderArray from '../../../utils/orderAlg';
 import * as Location from 'expo-location';
 import GooglePlacesAutocomplete from '../../../components/GooglePlacesAutocomplete';
@@ -50,9 +50,9 @@ export default function ClientHomeScreen(props: ClientHomeScreenProps) {
     const [ priceRange, setPriceRange ] = useState(0);
 
     // PriceSlider
-    const progress = useSharedValue(0);
-    const min = useSharedValue(0);
-    const max = useSharedValue(1000);
+    // const progress = useSharedValue(0);
+    // const min = useSharedValue(0);
+    // const max = useSharedValue(1000);
 
     async function getCurrentLocation() {
         if(user.lastLocation){
@@ -285,7 +285,7 @@ export default function ClientHomeScreen(props: ClientHomeScreenProps) {
                         <Text style={{fontWeight: 'bold', fontSize: 22, marginBottom: 20}}>Filtros</Text>
                         <View style={{marginBottom: 20}}>
                             <Text style={{marginBottom: 10, fontWeight: 'bold'}}>Limite de preço: R$ {priceRange}</Text>
-                                <Slider
+                                {/* <Slider
                                     theme={{
                                         disableMinTrackTintColor: '#fff',
                                         maximumTrackTintColor: '#d3d3d3',
@@ -298,7 +298,7 @@ export default function ClientHomeScreen(props: ClientHomeScreenProps) {
                                     progress={progress}
                                     minimumValue={min}
                                     maximumValue={max}
-                                />
+                                /> */}
                         </View>
                         <View style={{marginBottom: 30}}>
                             <Text style={{marginBottom: 10, fontWeight: 'bold'}}>Ordernar por:</Text>

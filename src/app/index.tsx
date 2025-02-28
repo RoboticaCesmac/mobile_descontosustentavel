@@ -1,9 +1,9 @@
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { Logo } from '../components/Logo';
 import { useEffect, useState } from 'react';
 import { router } from 'expo-router';
 import { auth, db } from '../firebase/config';
-import { onAuthStateChanged, signOut } from '@firebase/auth';
+import { onAuthStateChanged } from '@firebase/auth';
 import useUserStore from '../store/user';
 import { doc, getDoc } from 'firebase/firestore';
 import { mainStyles } from '../utils/mainStyles';

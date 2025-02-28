@@ -50,9 +50,9 @@ export default function RetailerHomeScreen(props: RetailerHomeScreenProps) {
     const [ priceRange, setPriceRange ] = useState(0);
 
     // PriceSlider
-    const progress = useSharedValue(0);
-    const min = useSharedValue(0);
-    const max = useSharedValue(1000);
+    // const progress = useSharedValue(0);
+    // const min = useSharedValue(0);
+    // const max = useSharedValue(1000);
 
     useFocusEffect(
         useCallback(() => {
@@ -244,7 +244,7 @@ export default function RetailerHomeScreen(props: RetailerHomeScreenProps) {
                         <Text style={{fontWeight: 'bold', fontSize: 22, marginBottom: 20}}>Filtros</Text>
                         <View style={{marginBottom: 20}}>
                             <Text style={{marginBottom: 10, fontWeight: 'bold'}}>Limite de preço: R$ {priceRange}</Text>
-                                <Slider
+                                {/* <Slider
                                     theme={{
                                         disableMinTrackTintColor: '#fff',
                                         maximumTrackTintColor: '#d3d3d3',
@@ -257,7 +257,7 @@ export default function RetailerHomeScreen(props: RetailerHomeScreenProps) {
                                     progress={progress}
                                     minimumValue={min}
                                     maximumValue={max}
-                                />
+                                /> */}
                         </View>
                         <View style={{marginBottom: 30}}>
                             <Text style={{marginBottom: 10, fontWeight: 'bold'}}>Ordernar por:</Text>

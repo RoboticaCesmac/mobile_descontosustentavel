@@ -1,6 +1,6 @@
 import { useState, useRef, Dispatch, Ref } from 'react';
 import { View, TextInput, Text, TouchableOpacity, StyleSheet, StyleProp, ViewStyle } from 'react-native';
-import { API_KEY } from "@env";
+import { MAPS_API_KEY } from "@env";
 import { mainStyles } from '../utils/mainStyles';
 import { Icon } from '@rneui/base';
 import useFetchData from '../hooks/useFetchData';
@@ -34,7 +34,7 @@ const GooglePlacesAutocomplete = (props: GooglePlacesAutoCompleteProps) => {
         const controller = new AbortController();
         controllerRef.current = controller;
 
-        const url = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${input}&key=${API_KEY}&language=pt-BR`;
+        const url = `https://maps.googleapis.com/maps/api/place/autocomplete/json?input=${input}&key=${MAPS_API_KEY}&language=pt-BR`;
 
         try {
             const response = await fetch(url, { signal: controller.signal });
@@ -75,7 +75,7 @@ const GooglePlacesAutocomplete = (props: GooglePlacesAutoCompleteProps) => {
         setLoading(true);
         try{
             const address = selectedPlace;
-            const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${API_KEY}`; 
+            const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${MAPS_API_KEY}`; 
             const res = await fetch(url);
             const geocode = await res.json();
             const geometryLocation = geocode.results[0].geometry.location;

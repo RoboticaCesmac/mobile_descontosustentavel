@@ -15,7 +15,7 @@ import { Modalize } from 'react-native-modalize';
 import { Picker } from '@react-native-picker/picker';
 import { states } from '../../db/mockedDb';
 import { GeoPoint } from 'firebase/firestore';
-import { API_KEY } from '@env';
+import { MAPS_API_KEY } from '@env';
 
 export interface EditProfileScreenProps {
 }
@@ -179,7 +179,7 @@ export default function EditProfileScreen (props: EditProfileScreenProps) {
                 }
 
                 const address = `${user.street}, ${user.number}, ${user.neighborhood}, ${user.city}, ${user.state}, ${user.cep}`;
-                const geoCodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${API_KEY}`; 
+                const geoCodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${MAPS_API_KEY}`; 
                 const res = await fetch(geoCodeUrl);
                 const geocode = await res.json();
                 const geometryLocation = geocode.results[0].geometry.location;

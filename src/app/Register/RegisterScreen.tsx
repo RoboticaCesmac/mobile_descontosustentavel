@@ -13,7 +13,7 @@ import { auth, db } from '../../firebase/config';
 import useUserStore from '../../store/user';
 import { createUserWithEmailAndPassword } from '@firebase/auth';
 import { doc, GeoPoint, setDoc } from 'firebase/firestore';
-import { API_KEY } from "@env";
+import { MAPS_API_KEY } from "@env";
 
 export interface RegisterScreenProps {
 }
@@ -123,7 +123,7 @@ export default function RegisterScreen (props: RegisterScreenProps) {
 
             if(userType === "RETAILER"){
                 const address = `${user.street}, ${user.number}, ${user.neighborhood}, ${user.city}, ${user.state}, ${user.cep}`;
-                const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${API_KEY}`; 
+                const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${MAPS_API_KEY}`; 
                 const res = await fetch(url);
                 const geocode = await res.json();
                 const geometryLocation = geocode.results[0].geometry.location;
